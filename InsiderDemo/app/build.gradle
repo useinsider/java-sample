@@ -34,10 +34,15 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:17.0.0'
 
     //Required
-    implementation 'com.google.firebase:firebase-messaging:20.1.5'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'com.useinsider:insider:10.1.0'
+    implementation 'com.useinsider:insider:11.0.0'
     implementation 'com.google.android.gms:play-services-ads:16.0.0'
+
+    implementation 'com.huawei.hms:push:4.0.2.300'
+    implementation 'com.huawei.hms:ads-identifier:3.4.28.305'
+    implementation 'com.huawei.hms:location:4.0.1.300'
 }
 //Required
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.huawei.agconnect'

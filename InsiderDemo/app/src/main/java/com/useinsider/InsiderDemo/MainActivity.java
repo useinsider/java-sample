@@ -11,6 +11,7 @@ import com.useinsider.insider.ContentOptimizerDataType;
 import com.useinsider.insider.Insider;
 import com.useinsider.insider.InsiderEvent;
 import com.useinsider.insider.InsiderGender;
+import com.useinsider.insider.InsiderIdentifiers;
 import com.useinsider.insider.InsiderProduct;
 import com.useinsider.insider.InsiderUser;
 import com.useinsider.insider.MessageCenterData;
@@ -53,12 +54,13 @@ public class MainActivity extends AppCompatActivity {
                         .setLanguage("TR");
 
                 // Setting User Identifiers.
-                currentUser.setUserIdentifierWithEmail("mobile@useinsider.com")
-                        .setUserIdentifierWithUserID("CRM-ID")
-                        .setUserIdentifierWithPhoneNumber("0000");
+                InsiderIdentifiers identifiers = new InsiderIdentifiers();
+                identifiers.addEmail("mobile@useinsider.com")
+                        .addPhoneNumber("0000")
+                        .addUserID("CRM-ID");
 
                 // Login and Logout
-                currentUser.login();
+                currentUser.login(identifiers);
                 currentUser.logout();
 
                 // Setting custom attributes.
@@ -101,7 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // MARK: If any parameter which is passed to this method is nil / null or an empty string, it will return an empty and invalid Insider Product Object. Note that an invalid Insider Product object will be ignored for any product related operations.
                 // You can crete Insider Product and add attributes later on it.
-                InsiderProduct insiderExampleProduct = Insider.Instance.createNewProduct("productID", "productName", "taxonomy", "imageURL", 1000.5, "currency");
+
+                String[] taxonomy = {"taxonomy1", "taxonomy2", "taxonomy3"};
+                InsiderProduct insiderExampleProduct = Insider.Instance.createNewProduct("productID", "productName", taxonomy, "imageURL", 1000.5, "currency");
 
                 // Setting Product Attributes in chainable way.
                 insiderExampleProduct.setColor("color")
@@ -111,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
                         .setPromotionDiscount(10.5)
                         .setSize("size")
                         .setSalePrice(10.5)
-                        .setSubCategory("subCategory")
                         .setShippingCost(10.5)
                         .setQuantity(10)
                         .setStock(10);
@@ -146,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
                 // --- RECOMMENDATION ENGINE --- //
 
                 // ID comes from your smart recommendation campaign.
-                // Please follow the language code structure. For instance tr:TR.
-                Insider.Instance.getSmartRecommendation(1, "tr:TR", "TRY", new RecommendationEngine.SmartRecommendation() {
+                // Please follow the language code structure. For instance tr_TR.
+                Insider.Instance.getSmartRecommendation(1, "tr_TR", "TRY", new RecommendationEngine.SmartRecommendation() {
                     @Override
                     public void loadRecommendationData(JSONObject recommendation) {
                         // Handle here
@@ -170,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 // --- PAGE VISITING --- //
 
                 Insider.Instance.visitHomePage();
-                Insider.Instance.visitListingPage("taxonomy");
+                Insider.Instance.visitListingPage(taxonomy);
 
                 InsiderProduct[] insiderExampleProducts = {insiderExampleProduct, insiderExampleProduct};
                 Insider.Instance.visitCartPage(insiderExampleProducts);
