@@ -6,7 +6,7 @@ android {
     defaultConfig {
         // TODO: Please change with your partner name.
         manifestPlaceholders = [partner:"yourpartnername"]
-        // TODO: Please change with your application ID as it is in google-service.json.
+        // TODO: Please change with your application ID as it is in google-service.json and agconnect-services.json.
         applicationId "com.useinsider.InsiderDemo"
         minSdkVersion 23
         targetSdkVersion 29
@@ -35,7 +35,7 @@ dependencies {
 
     //Required
     implementation 'com.google.firebase:firebase-messaging:20.2.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-process:2.2.0'
     implementation 'com.useinsider:insider:11.0.0'
     implementation 'com.google.android.gms:play-services-ads:16.0.0'
 
