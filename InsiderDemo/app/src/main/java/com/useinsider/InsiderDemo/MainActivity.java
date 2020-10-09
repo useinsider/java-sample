@@ -13,6 +13,7 @@ import com.useinsider.insider.InsiderEvent;
 import com.useinsider.insider.InsiderGender;
 import com.useinsider.insider.InsiderIdentifiers;
 import com.useinsider.insider.InsiderProduct;
+import com.useinsider.insider.InsiderSearchAPI;
 import com.useinsider.insider.InsiderUser;
 import com.useinsider.insider.MessageCenterData;
 import com.useinsider.insider.RecommendationEngine;
@@ -51,13 +52,15 @@ public class MainActivity extends AppCompatActivity {
                         .setLocationOptin(true)
                         .setFacebookID("Facebook-ID")
                         .setTwitterID("Twittter-ID")
-                        .setLanguage("TR");
+                        .setLanguage("TR")
+                        .setLocale("tr_TR");
 
                 // Setting User Identifiers.
                 InsiderIdentifiers identifiers = new InsiderIdentifiers();
                 identifiers.addEmail("mobile@useinsider.com")
-                        .addPhoneNumber("0000")
-                        .addUserID("CRM-ID");
+                        .addPhoneNumber("901234567")
+                        .addUserID("CRM-ID")
+                        .addCustomIdentifier("key", "value");
 
                 // Login and Logout
                 currentUser.login(identifiers);
@@ -208,6 +211,16 @@ public class MainActivity extends AppCompatActivity {
                 // Integer
                 int contentOptimizerInt = Insider.Instance.getContentIntWithName("int_variable_name", 10, ContentOptimizerDataType.ELEMENT);
                 Log.d("[INSIDER]", "[getContentIntWithName]: " + contentOptimizerInt);
+
+                // --- SEARCH API --- //
+
+                Insider.Instance.getSearchData("keyword", "currency", new InsiderSearchAPI.SearchResult() {
+                    @Override
+                    public void loadSearchResult(JSONObject searchResult) {
+                        // Handle here
+                    }
+
+                });
             }
         });
     }

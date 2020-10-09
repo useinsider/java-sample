@@ -305,4 +305,4 @@ fabric.properties
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-google-services.json
+# google-services.json

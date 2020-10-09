@@ -15,7 +15,7 @@ public class MyApplicationClass extends Application {
         super.onCreate();
         // TODO: Please change with your partner name.
         // Make sure that all the letters are lowercase.
-        Insider.Instance.init(this, "yourpartnername");
+        Insider.Instance.init(this, "your_partner_name");
         Insider.Instance.startTrackingGeofence();
         Insider.Instance.registerInsiderCallback(new InsiderCallback() {
             @Override
@@ -42,6 +42,7 @@ public class MyApplicationClass extends Application {
         // TODO: Add your splash activity.
 //        Insider.Instance.setSplashActivity(Splash.activity);
         Insider.Instance.startTrackingGeofence();
+        Insider.Instance.enableIDFACollection(false);
     }
 
 

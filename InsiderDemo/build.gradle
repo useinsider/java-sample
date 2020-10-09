@@ -20,7 +20,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {url "https://mobile.useinsider.com"}
+        maven {url "https://mobilesdk.useinsider.com/android"}
         maven {url "http://developer.huawei.com/repo/"}
     }
 }
