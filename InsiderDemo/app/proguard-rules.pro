@@ -23,6 +23,7 @@
 -keep class com.useinsider.insider.Insider { *; }
 -keep interface com.useinsider.insider.InsiderCallback { *; }
 -keep class com.useinsider.insider.InsiderUser { *; }
+-keep interface com.useinsider.insider.InsiderUser$InsiderIDResult { *; }
 -keep class com.useinsider.insider.InsiderProduct { *; }
 -keep class com.useinsider.insider.InsiderEvent { *; }
 -keep class com.useinsider.insider.InsiderCallbackTypes { *; }

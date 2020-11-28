@@ -1,11 +1,11 @@
 package com.useinsider.InsiderDemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.useinsider.insider.ContentOptimizerDataType;
 import com.useinsider.insider.Insider;
@@ -22,7 +22,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.Date;
-import java.util.Dictionary;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,23 +50,31 @@ public class MainActivity extends AppCompatActivity {
                         .setPushOptin(true)
                         .setLocationOptin(true)
                         .setFacebookID("Facebook-ID")
-                        .setTwitterID("Twittter-ID")
+                        .setTwitterID("Twitter-ID")
                         .setLanguage("TR")
                         .setLocale("tr_TR");
 
                 // Setting User Identifiers.
                 InsiderIdentifiers identifiers = new InsiderIdentifiers();
                 identifiers.addEmail("mobile@useinsider.com")
-                        .addPhoneNumber("901234567")
+                        .addPhoneNumber("+901234567")
                         .addUserID("CRM-ID")
                         .addCustomIdentifier("key", "value");
 
                 // Login and Logout
                 currentUser.login(identifiers);
+
+                currentUser.login(identifiers, new InsiderUser.InsiderIDResult() {
+                    @Override
+                    public void insiderIDResult(String insiderID) {
+                        // Handle here
+                        Log.d("[INSIDER]", "[InsiderIDResult]: " + insiderID);
+                    }
+                });
                 currentUser.logout();
 
                 // Setting custom attributes.
-                // MARK: Your attribute key should be all lowercased and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.
+                // MARK: Your attribute key should be all lowercase and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.
                 currentUser.setCustomAttributeWithString("string_attribute", "This is Insider.");
                 currentUser.setCustomAttributeWithInt("int_attribute", 10);
                 currentUser.setCustomAttributeWithDouble("double_attribute", 20.5);
@@ -123,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                         .setStock(10);
 
                 // Setting custom attributes.
-                // MARK: Your attribute key should be all lowercased and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.
+                // MARK: Your attribute key should be all lowercase and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.
                 insiderExampleProduct.setCustomAttributeWithString("string_parameter", "This is Insider.")
                         .setCustomAttributeWithInt("int_parameter", 10)
                         .setCustomAttributeWithDouble("double_parameter", 10.5)
@@ -161,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                Insider.Instance.getSmartRecommendationWithProduct(insiderExampleProduct, 1, "tr:TR", new RecommendationEngine.SmartRecommendation(){
+                Insider.Instance.getSmartRecommendationWithProduct(insiderExampleProduct, 1, "tr:TR", new RecommendationEngine.SmartRecommendation() {
                     @Override
                     public void loadRecommendationData(JSONObject recommendation) {
                         // Handle here
@@ -189,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                 Insider.Instance.setGDPRConsent(true);
 
                 // --- MESSAGE CENTER --- //
-                
+
                 Insider.Instance.getMessageCenterData(20, new Date(), new Date(1546300800), new MessageCenterData() {
                     @Override
                     public void loadMessageCenterData(JSONArray messageCenterData) {
@@ -214,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // --- SEARCH API --- //
 
-                Insider.Instance.getSearchData("keyword", "currency", new InsiderSearchAPI.SearchResult() {
+                Insider.Instance.getSearchData("keyword", "currency", "tr_TR", new InsiderSearchAPI.SearchResult() {
                     @Override
                     public void loadSearchResult(JSONObject searchResult) {
                         // Handle here
