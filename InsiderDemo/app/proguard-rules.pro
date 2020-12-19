@@ -34,6 +34,5 @@
 -keep interface com.useinsider.insider.RequestUtils$MessageCenterData { *; }
 -keep class com.useinsider.insider.Geofence { *; }
 -keep class com.useinsider.insider.ContentOptimizerDataType { *; }
--keep class com.useinsider.insider.Vendor { *; }
 -keep class org.openudid.** { *; }
 -keep class com.useinsider.insider.OpenUDID_manager { *; }
