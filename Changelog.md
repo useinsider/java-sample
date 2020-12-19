@@ -67,7 +67,9 @@ minSdkVersion 17
 # 11.4.0
 
 StrandHogg vulnerability fix.
+
 Some improvements.
+
 Setting user identifiers as attributes now requires successful unification.
 
 ### Changed
@@ -138,6 +140,7 @@ public void enableIDFACollection(boolean enableIDFACollection)
 # 11.2.0
 
 SDK host url changed.
+
 ACCESS_BACKGROUND_LOCATION permission check for an exception added.
 
 ## Removed
@@ -172,15 +175,16 @@ ACCESS_BACKGROUND_LOCATION permission check for an exception added.
 ## Changed
 
 
-- SDK url has been changed from `http://mobile.useinsider.com` to `http://mobilesdk.useinsider.com/android`.
+- SDK url has been changed from `https://mobile.useinsider.com` to `https://mobilesdk.useinsider.com/android`.
 
 ```gradle
-maven { url "http://mobilesdk.useinsider.com/android" }
+maven { url "https://mobilesdk.useinsider.com/android" }
 ```
 
 # 11.1.0
 
 Unification request optimizations, minor bug fixes has been done.
+
 Custom identifiers capability has been added.
 
 ### Removed
@@ -217,7 +221,8 @@ implementation 'androidx.lifecycle:lifecycle-process:2.2.0'
 
 # 11.0.0
 
-Huawei Messaging Services has been added. 
+Huawei Messaging Services has been added.
+
 Notification handling methods has been changed accordingly.
 
 ### Removed
