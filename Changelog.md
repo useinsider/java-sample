@@ -1,3 +1,13 @@
+# 11.6.1-nh
+
+`nh` stands for non-huawei.
+
+Same as 11.6.1 without any Huawei dependencies and services.
+
+# 11.6.1
+
+Minor changes.
+
 # 11.6.0-nh
 
 `nh` stands for non-huawei.

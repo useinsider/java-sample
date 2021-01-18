@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.useinsider.InsiderDemo">
 
-<!--    Required-->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--    Required-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
-<!--    Optional for Geofence-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--    Optional for Geofence-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+<!--    You can exclude permissions in this way-->
+<!--    <uses-permission-->
+<!--        android:name="android.permission.ACCESS_FINE_LOCATION"-->
+<!--        tools:node="remove" />-->
+<!--    <uses-permission-->
+<!--        android:name="android.permission.ACCESS_BACKGROUND_LOCATION"-->
+<!--        tools:node="remove" />-->
+<!--    <uses-permission-->
+<!--        android:name="android.permission.ACCESS_COARSE_LOCATION"-->
+<!--        tools:node="remove" />-->
+
+<!--    Below line added just for testing purposes. You don't need to include under your application tag. -->
+<!--    android:usesCleartextTraffic="true"-->
 
     <application
         android:name=".MyApplicationClass"
@@ -15,6 +31,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"

@@ -58,19 +58,10 @@ public class MainActivity extends AppCompatActivity {
                 InsiderIdentifiers identifiers = new InsiderIdentifiers();
                 identifiers.addEmail("mobile@useinsider.com")
                         .addPhoneNumber("+901234567")
-                        .addUserID("CRM-ID")
-                        .addCustomIdentifier("key", "value");
+                        .addUserID("CRM-ID");
 
                 // Login and Logout
                 currentUser.login(identifiers);
-
-                currentUser.login(identifiers, new InsiderUser.InsiderIDResult() {
-                    @Override
-                    public void insiderIDResult(String insiderID) {
-                        // Handle here
-                        Log.d("[INSIDER]", "[InsiderIDResult]: " + insiderID);
-                    }
-                });
                 currentUser.logout();
 
                 // Setting custom attributes.
