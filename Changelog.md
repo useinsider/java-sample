@@ -1,3 +1,18 @@
+# 11.7.0
+
+Android Channels custom sound issue is fixed.
+
+### Changed
+
+`getSmartRecommendationWithProduct` method taxonomy parameter minimum array size has been changed from 2 to 1.
+
+### Added
+
+- Stock existence product attribute has been added.
+
+```java
+public InsiderProduct setInStock(boolean isInStock)
+```
 # 11.6.1-nh
 
 `nh` stands for non-huawei.
@@ -153,7 +168,7 @@ SDK host url changed.
 
 ACCESS_BACKGROUND_LOCATION permission check for an exception added.
 
-## Removed
+### Removed
 
 - `setEmail` has been removed from InsiderUser. You can use `InsiderIdentifiers`.
 
@@ -167,7 +182,7 @@ ACCESS_BACKGROUND_LOCATION permission check for an exception added.
  public InsiderUser setPhoneNumber(String phoneNumber)
 ```
 
-## Added
+### Added
 
 - Event count limitation per session has been added.
 - Smart Recommendation logging feature added.
@@ -182,7 +197,7 @@ ACCESS_BACKGROUND_LOCATION permission check for an exception added.
  public InsiderUser setLocale(String locale)
 ```
 
-## Changed
+### Changed
 
 
 - SDK url has been changed from `https://mobile.useinsider.com` to `https://mobilesdk.useinsider.com/android`.
