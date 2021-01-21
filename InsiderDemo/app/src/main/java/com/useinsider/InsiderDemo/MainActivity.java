@@ -118,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
                         .setSalePrice(10.5)
                         .setShippingCost(10.5)
                         .setQuantity(10)
-                        .setStock(10);
+                        .setStock(10)
+                        .setInStock(true);
 
                 // Setting custom attributes.
                 // MARK: Your attribute key should be all lowercase and should not include any special or non Latin characters or any space, otherwise this attribute will be ignored. You can use underscore _.
