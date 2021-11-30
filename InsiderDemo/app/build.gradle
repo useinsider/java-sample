@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     defaultConfig {
         // TODO: Please change with your partner name.
         manifestPlaceholders = [partner:"yourpartnername"]
         // TODO: Please change with your application ID as it is in google-service.json and agconnect-services.json.
         applicationId "com.useinsider.InsiderDemo"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -52,7 +52,7 @@ dependencies {
     //Required
     implementation 'com.google.firebase:firebase-messaging:20.2.0'
     implementation 'androidx.lifecycle:lifecycle-process:2.2.0'
-    implementation 'com.useinsider:insider:11.7.0'
+    implementation 'com.useinsider:insider:12.3.1'
     implementation 'com.google.android.gms:play-services-ads:16.0.0'
 
     implementation 'com.huawei.hms:push:5.0.4.302'
