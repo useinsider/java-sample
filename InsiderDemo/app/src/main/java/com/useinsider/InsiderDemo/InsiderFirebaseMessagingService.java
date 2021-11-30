@@ -8,7 +8,7 @@ public class InsiderFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        if (remoteMessage != null && remoteMessage.getData().containsKey("source") && remoteMessage.getData().get("source").equals("Insider")) {
+        if (remoteMessage.getData().containsKey("source") && remoteMessage.getData().get("source").equals("Insider")) {
             Insider.Instance.handleFCMNotification(getApplicationContext(), remoteMessage);
             return;
         }
