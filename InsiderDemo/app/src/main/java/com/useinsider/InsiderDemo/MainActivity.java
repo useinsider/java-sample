@@ -210,16 +210,6 @@ public class MainActivity extends AppCompatActivity {
                 // Integer
                 int contentOptimizerInt = Insider.Instance.getContentIntWithName("int_variable_name", 10, ContentOptimizerDataType.ELEMENT);
                 Log.d("[INSIDER]", "[getContentIntWithName]: " + contentOptimizerInt);
-
-                // --- SEARCH API --- //
-
-                Insider.Instance.getSearchData("keyword", "currency", "tr_TR", new InsiderSearchAPI.SearchResult() {
-                    @Override
-                    public void loadSearchResult(JSONObject searchResult) {
-                        // Handle here
-                    }
-
-                });
             }
         });
     }
