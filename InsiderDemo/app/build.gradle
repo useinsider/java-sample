@@ -52,10 +52,10 @@ dependencies {
     //Required
     implementation 'com.google.firebase:firebase-messaging:20.2.0'
     implementation 'androidx.lifecycle:lifecycle-process:2.2.0'
-    implementation 'com.useinsider:insider:12.3.1'
+    implementation 'com.useinsider:insider:13.0.0'
     implementation 'com.google.android.gms:play-services-ads:16.0.0'
 
-    implementation 'com.huawei.hms:push:5.0.4.302'
+    implementation 'com.huawei.hms:push:6.1.0.300'
     implementation 'com.huawei.hms:ads-identifier:3.4.34.301'
     implementation 'com.huawei.hms:location:4.0.4.300'
 }
