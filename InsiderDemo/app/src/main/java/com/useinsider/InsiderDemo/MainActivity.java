@@ -13,7 +13,6 @@ import com.useinsider.insider.InsiderEvent;
 import com.useinsider.insider.InsiderGender;
 import com.useinsider.insider.InsiderIdentifiers;
 import com.useinsider.insider.InsiderProduct;
-import com.useinsider.insider.InsiderSearchAPI;
 import com.useinsider.insider.InsiderUser;
 import com.useinsider.insider.MessageCenterData;
 import com.useinsider.insider.RecommendationEngine;
