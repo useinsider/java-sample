@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // --- MESSAGE CENTER --- //
 
-                Insider.Instance.getMessageCenterData(20, new Date(), new Date(1546300800), new MessageCenterData() {
+                Insider.Instance.getMessageCenterData(20, new Date(1546300800), new Date(), new MessageCenterData() {
                     @Override
                     public void loadMessageCenterData(JSONArray messageCenterData) {
                         // Handle here
