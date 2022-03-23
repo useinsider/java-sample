@@ -55,9 +55,9 @@ dependencies {
     implementation 'com.useinsider:insider:13.0.0'
     implementation 'com.google.android.gms:play-services-ads:16.0.0'
 
-    implementation 'com.huawei.hms:push:6.1.0.300'
-    implementation 'com.huawei.hms:ads-identifier:3.4.34.301'
-    implementation 'com.huawei.hms:location:4.0.4.300'
+    implementation 'com.huawei.hms:push:6.3.0.302'
+    implementation 'com.huawei.hms:ads-identifier:3.4.39.302'
+    implementation 'com.huawei.hms:location:6.3.0.300'
 }
 //Required
 apply plugin: 'com.google.gms.google-services'
