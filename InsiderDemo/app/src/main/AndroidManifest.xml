@@ -27,7 +27,7 @@
 
     <application
         android:name=".MyApplicationClass"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ins_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -48,6 +48,9 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1577649061306184~2982035319"/>
     </application>
 
 </manifest>
