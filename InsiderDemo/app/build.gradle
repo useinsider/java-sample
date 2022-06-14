@@ -7,7 +7,6 @@ android {
         //  into the Insider panel. The left side of your mail address.
         manifestPlaceholders = [partner:"your_partner_name"]
         // TODO: Please change with your application ID as it is in google-service.json
-        //  and agconnect-services.json.
         applicationId "com.useinsider.InsiderDemo"
         minSdkVersion 19
         targetSdkVersion 32
@@ -61,14 +60,9 @@ dependencies {
     //Required
     implementation 'com.google.firebase:firebase-messaging:23.0.0'
     implementation 'androidx.lifecycle:lifecycle-process:2.4.1'
-    implementation 'com.useinsider:insider:13.2.0'
+    implementation 'com.useinsider:insider:13.2.0-nh'
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
-
-    implementation 'com.huawei.hms:push:6.3.0.304'
-    implementation 'com.huawei.hms:ads-identifier:3.4.39.302'
-    implementation 'com.huawei.hms:location:6.3.0.300'
 }
 
 //Required
 apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.huawei.agconnect'
