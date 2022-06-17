@@ -24,15 +24,6 @@ public class MyApplicationClass extends Application {
                     case NOTIFICATION_OPEN:
                         Log.d("[INSIDER]", "[NOTIFICATION_OPEN]: " + data);
                         break;
-                    case INAPP_BUTTON_CLICK:
-                        Log.d("[INSIDER]", "[INAPP_BUTTON_CLICK]: " + data);
-                        break;
-                    case TEMP_STORE_PURCHASE:
-                        Log.d("[INSIDER]", "[TEMP_STORE_PURCHASE]: " + data);
-                        break;
-                    case TEMP_STORE_ADDED_TO_CART:
-                        Log.d("[INSIDER]", "[TEMP_STORE_ADDED_TO_CART]: " + data);
-                        break;
                     case TEMP_STORE_CUSTOM_ACTION:
                         Log.d("[INSIDER]", "[TEMP_STORE_CUSTOM_ACTION]: " + data);
                         break;
