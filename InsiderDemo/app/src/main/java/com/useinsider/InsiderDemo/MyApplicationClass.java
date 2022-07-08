@@ -16,7 +16,6 @@ public class MyApplicationClass extends Application {
         // TODO: Please change with your partner name.
         // Make sure that all the letters are lowercase.
         Insider.Instance.init(this, "your_partner_name");
-        Insider.Instance.startTrackingGeofence();
         Insider.Instance.registerInsiderCallback(new InsiderCallback() {
             @Override
             public void doAction(JSONObject data, InsiderCallbackType callbackType) {
