@@ -31,6 +31,7 @@ public class MyApplicationClass extends Application {
         });
         // TODO: Add your splash activity.
         //Insider.Instance.setSplashActivity(Splash.activity);
+        Insider.Instance.getCurrentUser().setLocationOptin(true);
         Insider.Instance.startTrackingGeofence();
         Insider.Instance.enableIDFACollection(false);
         Insider.Instance.getCurrentUser().setLocale("tr_TR");

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     defaultConfig {
         // TODO: Please change with your partner name. You can find the partner name after login
         //  into the Insider panel. The left side of your mail address.
@@ -10,7 +10,7 @@ android {
         //  and agconnect-services.json.
         applicationId "com.useinsider.InsiderDemo"
         minSdkVersion 19
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -61,7 +61,7 @@ dependencies {
     //Required
     implementation 'com.google.firebase:firebase-messaging:23.0.6'
     implementation 'androidx.lifecycle:lifecycle-process:2.5.0'
-    implementation 'com.useinsider:insider:13.4.0'
+    implementation 'com.useinsider:insider:13.4.2'
     implementation 'com.google.android.gms:play-services-ads:21.0.0'
 
     implementation 'com.huawei.hms:push:6.5.0.300'
